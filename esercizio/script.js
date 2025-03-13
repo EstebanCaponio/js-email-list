@@ -3,19 +3,17 @@ const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 const emailList = document.getElementById('email-list');
 const form = document.querySelector('form');
 
-
-
 tenMails();
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-
+    console.clear();
     tenMails()
+
 })
 
-
 // funzione
-function tenMails(){
+function tenMails() {
 
     let emails = '';
 
@@ -34,5 +32,4 @@ function tenMails(){
                 console.log('error:', error);
             });
     }
-
 }
