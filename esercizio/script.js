@@ -3,7 +3,7 @@ const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 const emailList = document.getElementById('email-list');
 let emails = '';
 
-for (i = 0; i <= 10; i++) {
+for (i = 1; i <= 10; i++) {
 
     axios.get(endpoint)
         .then((response) => {
