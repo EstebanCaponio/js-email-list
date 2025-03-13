@@ -3,22 +3,22 @@ const endpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 const emailList = document.getElementById('email-list');
 const form = document.querySelector('form');
 
-tenMails();
+tenMails(endpoint);
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     console.clear();
-    tenMails()
+    tenMails(endpoint);
 
 })
 
 // funzione
-function tenMails() {
+function tenMails(urlApi) {
 
     let emails = '';
 
     for (let i = 1; i <= 10; i++) {
-        axios.get(endpoint)
+        axios.get(urlApi)
             .then((response) => {
                 let email = response.data.response;
                 console.log(email);
